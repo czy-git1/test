@@ -1,0 +1,18 @@
+.pay-pop{
+  width: 600rpx;
+  padding: 20px 50rpx;
+  border-radius: 10rpx;
+}
+.pay-bold{
+  text-align: center;
+  padding: 35px 0;
+}
+.pay-bold .dolar{
+  font-size: 18px;
+}
+.pay-bold .money{
+  font-size: 28px;
+}
+.pay-btns{
+  text-align: center;
+}

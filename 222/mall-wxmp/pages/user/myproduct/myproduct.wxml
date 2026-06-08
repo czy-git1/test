@@ -1,0 +1,17 @@
+<wxs src="../../../utils/date.wxs" module="filter" />
+<view class="fav-list">
+  <view class="item" wx:for="{{productList.records}}" wx:key="cartId" bindtap="toBlogDetail" data-pid='{{item.product.productId}}' wx:for-index="idx">
+    <van-card
+      price="{{filter.formatNumber(item.product.price)}}"
+      title="{{item.product.name}}"
+      desc="{{item.product.subTitle}}"
+      thumb="{{item.product.mainPic}}"
+    >
+      <view slot="footer" class="opt-btn">
+        <van-button size="small" icon="delete-o" color="#b55a4b" catchtap="onRemoveFav" data-fid="{{item.favoriteId}}">删除收藏</van-button>
+        <van-button size="small" icon="cart-o" color="#2e75b6" catchtap="onBuyAgain" data-pid="{{item.productId}}">立即购买</van-button>
+      </view>
+    </van-card>
+  </view>
+  <van-dialog id="van-dialog" />
+</view>

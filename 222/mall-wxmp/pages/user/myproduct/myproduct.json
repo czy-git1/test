@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "van-dialog": "@vant/weapp/dialog/index",
-    "van-tag": "@vant/weapp/tag/index",
-    "van-card": "@vant/weapp/card/index"
-  },
-  "navigationBarTitleText": "收藏夹"
-}

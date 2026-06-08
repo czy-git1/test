@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "van-dialog": "@vant/weapp/dialog/index",
-    "van-card": "@vant/weapp/card/index"
-  },
-  "navigationBarTitleText": "提交订单"
-}

@@ -1,9 +1,0 @@
-/* pages/order/myorders.wxss */
-.price{
-  color: #ee0a24;
-}
-.order-code{
-  padding-left: 8px;
-  font-size: 16px;
-  color: #333;
-}

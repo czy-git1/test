@@ -1,0 +1,43 @@
+<!--pages/user/profile.wxml-->
+<view class="content">
+  <scroll-view scroll-y="true" show-scrollbar="true" enhanced="true" class="input-dialog">
+    <view class="val-input">
+      <view class="meta">手机号</view>
+      <input bindinput="bindMobileChange" type="number" value="{{userInfo.mobile}}"></input>
+    </view>
+    <view class="val-input">
+      <view class="meta">昵称</view>
+      <input bindinput="bindFarmNameChange" type="text" value="{{userInfo.nickName}}"></input>
+    </view>
+    <view class="val-input">
+      <view class="meta">性别</view>
+      <picker bindchange="bindGenderChange" value="{{gindex}}" range="{{genderTypes}}">
+        <view class="picker">
+          {{genderTypes[gindex]}}
+        </view>
+      </picker>
+    </view>
+    <!-- <view class="val-input">
+      <view class="meta">学校信息</view>
+      <input bindinput="bindShortDescChange" type="text" value="{{userInfo.shortDesc}}"></input>
+    </view> -->
+    <view class="val-input">
+      <view class="meta">所在地区</view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          {{region[0]}}-{{region[1]}}-{{region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class="val-input">
+      <view class="meta">头像</view>
+      <image class="new-img" src="{{profileImg}}" wx:if="{{profileImg!=null && profileImg!=''}}"></image>
+      <image class="new-img" src="{{userInfo.pic==null?'http://129.211.222.131:18080/images/20230309132054typ1q.jpg':userInfo.pic}}" wx:else></image>
+      <van-button color="#b55a4b" icon="photo" bindtap="chooseImg" size="small">选择图片</van-button>
+    </view>
+    <view class="btns">
+      <van-button color="#2e75b6" icon="share" bindtap="publishUpdate">更新信息</van-button>
+    </view>
+  </scroll-view>
+  <van-dialog id="van-dialog" />
+</view>

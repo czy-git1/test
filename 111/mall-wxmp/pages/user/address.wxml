@@ -1,0 +1,64 @@
+<view class="add-list" wx:if="{{!showEdit}}">
+  <van-cell is-link center wx:for="{{addressList}}" wx:key="addressId" bindtap="editAddress" data-aid='{{item.addressId}}'>
+    <view slot="title">
+      <view>
+        <span wx:if="{{item.isDefault==1}}"><van-icon name="bookmark" color="#2e75b6"/> 默认</span>
+        <!-- <van-button color="#b55a4b" icon="location" catchtap="addNewAddress" style="float: right;" size="small" wx:if="{{item.isDefault==0}}">设为默认</van-button> -->
+        <van-icon name="delete" bindtap="deleteAddress" data-aid="{{item.addressId}}" style="color:#b55a4b; float: right; font-size: 22px;padding: 4px 10px;"/> 
+      </view>
+      <view class="van-cell-text">
+        <view class="add">
+          <text>{{item.area}}{{item.detail}}</text>
+          
+        </view>
+        <view class="contact">
+          <text>{{item.contact}}</text>
+          <text>{{item.mobile}}</text>
+        </view>
+        
+      </view>
+    </view>
+  </van-cell>
+  <view class="btns">
+    <van-button color="#2e75b6" icon="add-o" bindtap="showEditForm" size="small">新增地址</van-button>
+  </view>
+</view>
+<view class="input-dialog" wx:if="{{showEdit}}">
+  <page-container show="{{showEdit}}" overlay="{{false}}" custom-style="height:100vh;overflow:scroll" bindbeforeleave="onBeforeLeave">
+    <view class="ntitle">新增地址</view>
+    <view class="val-input">
+      <view class="meta">所在地区</view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          <!-- {{region[0]}}-{{region[1]}}-{{region[2]}} -->
+          {{newAddress.area}}
+        </view>
+      </picker>
+    </view>
+    <view class="val-input">
+      <view class="meta">详细地址</view>
+      <input bindinput="bindDetailInput" placeholder="请输入街道与门牌号" type="text" value="{{newAddress.detail}}"></input>
+    </view>
+    <view class="val-input">
+      <view class="meta">收件人姓名</view>
+      <input bindinput="bindContactInput" placeholder="请输入您的姓名" type="text" value="{{newAddress.contact}}"></input>
+    </view>
+    <view class="val-input">
+      <view class="meta">手机号</view>
+      <input bindinput="bindMobileInput" placeholder="请输入您的手机号" type="number" value="{{newAddress.mobile}}"></input>
+    </view>
+    <view class="val-input">
+      <van-checkbox
+        value="{{ newAddress.isDefault }}"
+        checked-color="#b55a4b"
+        catchtap="onChangeSelect"
+      >设为默认
+      </van-checkbox>
+    </view>
+    
+    <view class="btns">
+      <van-button color="#b55a4b" icon="close" bindtap="onCancleEdit" size="small" style="margin-right: 20px;">取消</van-button>
+      <van-button color="#2e75b6" icon="passed" bindtap="onSaveAddress" size="small">保存</van-button>
+    </view>
+  </page-container>
+</view>

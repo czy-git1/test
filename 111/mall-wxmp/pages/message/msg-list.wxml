@@ -1,0 +1,8 @@
+<wxs src="../../utils/date.wxs" module="filter" />
+<view class="fav-list">
+  <van-cell label="{{filter.format(item.sendTime, 'YY-MM-DD hh:mm')}}" is-link center wx:for="{{messageList}}" wx:key="msgId" bind:click="toChat" data-otherid="{{item.otherUser.userId}}">
+    <view slot="title">
+      <view class="van-cell-text">{{item.otherUser.nickName}}</view>
+    </view>
+  </van-cell>
+</view>

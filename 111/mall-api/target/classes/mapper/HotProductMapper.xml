@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mall.dao.mapper.HotProductMapper">
+  <resultMap id="BaseResultMap" type="com.mall.dao.model.HotProduct">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="hot_id" jdbcType="INTEGER" property="hotId" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="hot_type" jdbcType="INTEGER" property="hotType" />
+    <result column="tags" jdbcType="VARCHAR" property="tags" />
+    <association property="product" column="product_id" select="com.mall.dao.mapper.ProductMapper.selectProductById"></association>
+  </resultMap>
+
+  <select id="selectProductsList" resultMap="BaseResultMap">
+    select * from hot_product hp
+    <if test="type!=null">
+      where hp.hot_type=#{type}
+    </if>
+    order by sort limit #{start},#{end}
+  </select>
+
+  <select id="selectProductsCount" resultType="java.lang.Integer">
+    select count(*) from hot_product hp
+    <if test="type!=null">
+      where hp.hot_type=#{type}
+    </if>
+  </select>
+
+  <select id="selectRecProducts" resultMap="BaseResultMap">
+    select * from hot_product hp where hp.hot_type=1 order by sort
+  </select>
+
+  <select id="selectHotProducts" resultMap="BaseResultMap">
+    select * from hot_product hp where hp.hot_type=2 order by sort
+  </select>
+
+</mapper>

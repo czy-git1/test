@@ -1,0 +1,11 @@
+<view class="clist">
+  <view class="cat-list">
+    <view class="citem" wx:for="{{categoryList}}" wx:key="categoryId" bindtap="toCategoryProducts" data-cid="{{item.categoryId}}">
+      <view class="cimg">
+        <image src="{{item.pic}}" mode="aspectFit"/>
+      </view>
+      <view class="cname">{{item.name}}</view>
+      <view class="cdesc">{{item.shortDesc}}</view>
+    </view>
+  </view>
+</view>

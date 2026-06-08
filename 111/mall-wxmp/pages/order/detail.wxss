@@ -1,0 +1,123 @@
+.content{
+  margin-bottom: 5px;
+  font-size: 14px;
+  padding-top: 10px;
+  color: #333;
+}
+.fb-btn{
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  background: #2e75b6;
+  color: #fff;
+  text-align: center;
+  border-radius: 17px;
+  padding: 0 20px;
+}
+.btns{
+  margin: 25px 0;
+  text-align: center;
+}
+.backgroud-layer{
+  background-color: rgba(0,0,0,.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+}
+.val-input{
+  padding: 10px 10px 5px 10px;
+}
+.val-input input, .val-input picker{
+  border: 1px #ccc solid;
+  height: 30px;
+  font: 16px;
+  padding: 5px 8px;
+}
+.val-input .meta{
+  padding-bottom: 4px;
+}
+.input-dialog{
+  background-color: #fff;
+  padding: 10px 0;
+}
+.bottom-btn{
+  position: fixed;
+  bottom: 40px;
+  text-align: center;
+  width: 100%;
+}
+.bottom-btn .fb-btn{
+  width: 200px;
+}
+.main-profile{
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+.main-profile .pic{
+  height: 100px;
+  width: 100px;
+}
+.input-dialog .new-img{
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-bottom: 10px;
+}
+.vph{
+  display: inline-block;
+  padding: 5px 0;
+  color: #e2a388;
+  font-size: 14px;
+}
+.photography{
+  padding: 10px 10px 0 10px;
+}
+.photography .pname{
+  color: #2e75b6;
+  font-size: large;
+}
+.photography .meta{
+  color: #666;
+  font-size: medium;
+}
+.val-input .value{
+  padding-left: 10px;
+}
+.val-input .meta{
+  color: #666;
+}
+.val-input .price{
+  color: #ee0a24;
+  font-size: 16px;
+}
+.pitem{
+  border-bottom: 1px solid #ccc;
+}
+.pitem .opt-btn{
+  padding-top: 4px;
+}
+.pitem .van-card .van-card__desc{
+  clear: both;
+  color: #888;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.order-attr{
+  padding: 5px 10px;
+}
+.order-attr .meta{
+  color: #666;
+  padding-right: 5px;
+}
+.btns van-button{
+  margin-right: 10px;
+}

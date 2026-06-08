@@ -1,0 +1,31 @@
+<!--miniprogram/pages/login/login.wxml-->
+<!-- <view class="container">
+  <view class="val-input">
+    <view class="meta">手机号</view>
+    <input placeholder="" value="{{mobile}}" bindinput="inputMobile"></input>
+  </view>
+  <view class="val-input">
+    <view class="meta">密码</view>
+    <input type="password" bindinput="inputPwd"></input>
+  </view>
+  <view class="btns">
+    <button class="orange-btn" bindtap="login">登录</button>
+    <button class="orange-btn reg-btn" bindtap="toReg">注册</button>
+  </view>
+</view> -->
+<van-popup
+  show="{{ showAuth }}"
+  position="bottom"
+  custom-style="height: 35%;"
+  closeable
+  bind:close="onCloseAuth"
+>
+  <view class="auth-pop">
+    <view class="auth-head">网上商城小程序申请</view>
+    <view class="auth-bold">获取您的微信身份信息，是否授权一键登录？</view>
+    <view class="auth-btns">
+      <van-button type="primary" size="normal" custom-class="auth-btn" bindtap="userLogin">允 许</van-button>
+      <van-button type="warning" size="normal" custom-class="auth-btn" bindtap="onCloseAuth">拒 绝</van-button>
+    </view>
+  </view>
+</van-popup>

@@ -1,0 +1,54 @@
+<wxs src="../../utils/date.wxs" module="filter" />
+<view class="content">
+  <!-- <view class="photography">
+    <view class="title"><text class="meta">订单信息</text></view>
+  </view> -->
+  <view class="order-item" wx:for="{{previewOrder.orderItems}}" wx:key="itemId">
+    <van-card
+      price="{{filter.formatNumber(item.product.price)}}"
+      desc="{{item.product.subTitle}}"
+      title="{{item.product.name}}"
+      thumb="{{ item.product.mainPic }}"
+      num="{{item.quantity}}"
+    />
+  </view>
+  <view class="order-meta">
+    <view class="row">
+      <text class="meta">商品总数量：</text>
+      <text>{{previewOrder.totalNum}}</text>
+    </view>
+    <view class="row">
+      <text class="meta">订单总金额：</text>
+      <text class="meta">￥</text><text class="price">{{filter.formatNumber(previewOrder.totalPrice)}}</text>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" show-scrollbar="true" enhanced="true" class="input-dialog" >
+    <view class="val-input">
+      <view class="meta" style="height: 30px;line-height: 30px;"><!-- -->
+        <text>收货信息</text>
+        <van-button color="#b55a4b" icon="location" bindtap="addNewAddress" style="float: right;" size="small">地址管理</van-button>
+      </view>
+      <picker bindchange="bindAddressChange" value="{{pindex}}" range="{{addressList}}" range-key="detail">
+        <view class="picker">
+          <view>
+            <text>{{addressList[pindex].area}}{{addressList[pindex].detail}}</text>
+          </view>
+          <view>
+            <text>{{addressList[pindex].contact}}</text>
+            <text>{{addressList[pindex].mobile}}</text>
+            <van-icon name="arrow" style="float: right;"/>
+          </view>
+          
+        </view>
+      </picker>
+    </view>
+    <view class="val-input">
+      <view class="meta">订单备注</view>
+      <input bindinput="bindRemarkChange" placeholder="选填" type="text" value="{{order.shortDesc}}"></input>
+    </view>
+    <view class="btns">
+      <van-button color="#2e75b6" icon="share" bindtap="onSubmitOrder">提交订单</van-button>
+    </view>
+  </scroll-view>
+  <van-dialog id="van-dialog" />
+</view>

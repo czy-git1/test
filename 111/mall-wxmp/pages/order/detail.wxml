@@ -1,0 +1,69 @@
+<wxs src="../../utils/date.wxs" module="filter" />
+<view class="content">
+  <view class="order-attr">
+    <text class="meta">订单号号</text>
+    <text class="value">{{orderInfo.orderCode}}</text>
+  </view>
+  <view class="order-attr">
+    <text class="meta">订单时间</text>
+    <text class="value">{{filter.format(orderInfo.orderTime, 'YY-MM-DD hh:mm')}}</text>
+  </view>
+  <view class="order-attr">
+    <text class="meta">订单状态</text>
+    <van-tag type="primary" round size="medium" wx:if="{{orderInfo.status==1}}">待支付</van-tag>
+    <van-tag type="primary" round size="medium" wx:if="{{orderInfo.status==2}}">待发货</van-tag>
+    <van-tag type="primary" round size="medium" wx:if="{{orderInfo.status==3}}">待收货</van-tag>
+    <van-tag type="success" round size="medium" wx:if="{{orderInfo.status==4}}">已完成</van-tag>
+    <van-tag color="#666" round size="medium" wx:if="{{orderInfo.status==-1}}">已取消</van-tag>
+  </view>
+  <scroll-view scroll-y="true" show-scrollbar="true" enhanced="true" class="input-dialog" >
+    <view class="pitem" wx:for="{{orderInfo.orderItems}}" wx:key="itemId">
+      <van-card
+        price="{{filter.formatNumber(item.price)}}"
+        desc="{{item.product.subTitle}}"
+        title="{{item.product.name}}"
+        num="{{item.quantity}}"
+        thumb="{{ item.product.mainPic }}"
+      >
+        <view slot="footer" class="opt-btn">
+          <van-button size="small" icon="comment-o" color="#2e75b6" catchtap="toFeedback" data-iid="{{item.itemId}}" data-pid="{{item.productId}}" wx:if="{{item.iscomment==0&&orderInfo.status==4}}" style="margin-right: 8px;">发表评论</van-button>
+          <van-button size="small" icon="cart-o" color="#b55a4b" catchtap="onBuyAgain" data-pid="{{item.productId}}">再次购买</van-button>
+        </view>
+      </van-card>
+    </view>
+    <view class="val-input">
+      <text class="meta">订单总额：</text>
+      <text class="meta">￥</text> <text class="price">{{filter.formatNumber(orderInfo.totalPrice)}}</text>
+    </view>
+    <view class="val-input">
+      <view class="meta">收货人信息</view>
+      <view class="value">
+        <text>{{orderInfo.fullAddress}}</text>
+      </view>
+      <view class="value">
+        <text>{{orderInfo.receiveName}} </text>
+        <text> {{orderInfo.mobile}}</text>
+      </view>
+    </view>
+    <view class="val-input" wx:if="{{orderInfo.remark}}">
+      <view class="meta">订单备注</view>
+      <view class="value">
+        {{orderInfo.remark}}
+      </view>
+    </view>
+    <view class="val-input" wx:if="{{orderInfo.expNo}}">
+      <view class="meta">快递单号</view>
+      <view class="value">
+        {{orderInfo.expNo}}
+      </view>
+    </view>
+    <!--操作按钮-->
+    <view class="btns">
+      <van-button color="#2e75b6" icon="wechat-pay" bindtap="toPay" wx:if="{{orderInfo.status==1}}">马上支付</van-button>
+      <van-button color="#b55a4b" icon="close" bindtap="onCancelOrder" wx:if="{{orderInfo.status==1||orderInfo.status==2}}">取消订单</van-button>
+      <van-button color="#2e75b6" icon="success" bindtap="onCompleteOrder" wx:if="{{orderInfo.status==3}}">确认收货</van-button>
+      <van-button color="#2e75b6" icon="comment-o" bindtap="toFeedback" wx:if="{{orderInfo.status==4}}">我要评价</van-button>
+    </view>
+  </scroll-view>
+  <van-dialog id="van-dialog" />
+</view>

@@ -1,0 +1,7 @@
+.item{
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+}
+.opt-btn van-button{
+  margin-left: 10px;
+}

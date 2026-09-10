@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ae66b487-4cad-4dc6-8330-e5c9ae454185" name="更改" comment="最终版本" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;czy-git1&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/czy-git1/test.git&quot;,
+    &quot;accountId&quot;: &quot;3b5fcb7b-e6cd-4fc4-8e96-b56c75510de4&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3J814wo4lJnachObFqt25mxn9d7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-c59985aa861c-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.24374.152" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="ae66b487-4cad-4dc6-8330-e5c9ae454185" name="更改" comment="" />
+      <created>1789027695358</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789027695358</updated>
+      <workItem from="1789027696376" duration="4284000" />
+      <workItem from="1789032981695" duration="87000" />
+    </task>
+    <task id="LOCAL-00001" summary="第一版">
+      <option name="closed" value="true" />
+      <created>1789027882807</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1789027882807</updated>
+    </task>
+    <task id="LOCAL-00002" summary="第二版">
+      <option name="closed" value="true" />
+      <created>1789027938133</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1789027938133</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test02">
+      <option name="closed" value="true" />
+      <created>1789028562552</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1789028562552</updated>
+    </task>
+    <task id="LOCAL-00004" summary="01：第三次修改">
+      <option name="closed" value="true" />
+      <created>1789028627549</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1789028627549</updated>
+    </task>
+    <task id="LOCAL-00005" summary="03:创建">
+      <option name="closed" value="true" />
+      <created>1789029217719</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1789029217719</updated>
+    </task>
+    <task id="LOCAL-00006" summary="02:修改">
+      <option name="closed" value="true" />
+      <created>1789031370229</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1789031370229</updated>
+    </task>
+    <task id="LOCAL-00007" summary="最终版本">
+      <option name="closed" value="true" />
+      <created>1789032290196</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1789032290196</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第一版" />
+    <MESSAGE value="第二版" />
+    <MESSAGE value="test02" />
+    <MESSAGE value="01：第三次修改" />
+    <MESSAGE value="03:创建" />
+    <MESSAGE value="02:修改" />
+    <MESSAGE value="最终版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="最终版本" />
+  </component>
+</project>
